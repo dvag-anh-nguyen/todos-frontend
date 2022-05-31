@@ -9,6 +9,7 @@ import {TaskListComponent} from './+tasks/task-list/task-list.component';
 import {BoardItemComponent} from './+boards/board-item/board-item.component';
 import {BoardListComponent} from './+boards/board-list/board-list.component';
 import {CoreModule} from "./core/core.module";
+import {TranslocoRootModule} from "./core/transloco/transloco-root.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CoreModule} from "./core/core.module";
     BrowserModule,
     AppRoutingModule,
     AppStoreModule,
-    CoreModule
+    CoreModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]

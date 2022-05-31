@@ -1,0 +1,17 @@
+{
+  "app": {
+    "name": "TODOS"
+  },
+  "navigation": {
+    "forward": "Weiter",
+    "back": "Zurück",
+    "close": "Schließen"
+  },
+  "button": {
+    "show": "Anzeigen",
+    "hide": "Ausblenden"
+  },
+  "placeholder": "Bitte eingeben",
+  "loading": "Bitte warten...",
+  "error": "Fehler"
+}
