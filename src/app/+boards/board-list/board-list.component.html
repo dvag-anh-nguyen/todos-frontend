@@ -1,0 +1,8 @@
+<div *ngIf="boards">
+  Number of boards: {{ boards.length }}
+  <ul>
+    <li *ngFor="let board of boards">
+      <app-board-item [value]="board"></app-board-item>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,335 @@
+\:host
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-size: 14px
+  color: #333
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1, h2, h3, h4, h5, h6
+  margin: 8px 0
+
+p
+  margin: 0
+
+.spacer
+  flex: 1
+
+.toolbar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 60px
+  display: flex
+  align-items: center
+  background-color: #1976d2
+  color: white
+  font-weight: 600
+
+  .info
+    margin: 0 16px
+
+  .icon-button
+    cursor: pointer
+    color: white
+    background: #cacaca
+    border: 1px solid #fefefe
+    padding: 0px 4px 1px 4px
+    font-weight: bold
+    width: 16px
+    height: 16px
+    :hover
+      opacity: 0.8
+
+.content
+  display: flex
+  margin: 82px auto 32px
+  padding: 0 16px
+  max-width: 960px
+  flex-direction: column
+  align-items: center
+
+svg.material-icons
+  height: 24px
+  width: auto
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.card svg.material-icons path
+  fill: #888
+
+.card-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 16px
+
+.card
+  all: unset
+  border-radius: 4px
+  border: 1px solid #eee
+  background-color: #fafafa
+  height: 40px
+  width: 200px
+  margin: 0 8px 16px
+  padding: 16px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  transition: all 0.2s ease-in-out
+  line-height: 24px
+
+.card-container .card:not(:last-child)
+  margin-right: 0
+
+.card.card-small
+  height: 16px
+  width: 168px
+
+.card-container .card:not(.highlight-card)
+  cursor: pointer
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35)
+
+    .material-icons path
+      fill: rgb(105, 103, 103)
+
+.card.highlight-card
+  background-color: #1976d2
+  color: white
+  font-weight: 600
+  border: none
+  width: auto
+  min-width: 30%
+  position: relative
+
+  span
+    margin-left: 60px
+
+svg
+  &#rocket
+    width: 80px
+    position: absolute
+    left: -10px
+    top: -24px
+
+  &#rocket-smoke
+    height: calc(100vh - 95px)
+    position: absolute
+    top: 10px
+    right: 180px
+    z-index: -10
+
+a
+  color: #1976d2
+  text-decoration: none
+
+  &:visited
+    color: #1976d2
+    text-decoration: none
+
+  &:hover
+    color: #1976d2
+    text-decoration: none
+    color: #125699
+
+.terminal
+  position: relative
+  width: 80%
+  max-width: 600px
+  border-radius: 6px
+  padding-top: 45px
+  margin-top: 8px
+  overflow: hidden
+  background-color: rgb(15, 15, 16)
+
+  &::before
+    content: "\2022 \2022 \2022"
+    position: absolute
+    top: 0
+    left: 0
+    height: 4px
+    background: rgb(58, 58, 58)
+    color: #c2c3c4
+    width: 100%
+    font-size: 2rem
+    line-height: 0
+    padding: 14px 0
+    text-indent: 4px
+
+  pre
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace
+    color: white
+    padding: 0 1rem 1rem
+    margin: 0
+
+.circle-link
+  height: 40px
+  width: 40px
+  border-radius: 40px
+  margin: 8px
+  background-color: white
+  border: 1px solid #eeeeee
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  transition: 1s ease-out
+
+  &:hover
+    transform: translateY(-0.25rem)
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+
+footer
+  margin-top: 8px
+  display: flex
+  align-items: center
+  line-height: 20px
+
+  a
+    display: flex
+    align-items: center
+
+.github-star-badge
+  color: #24292e
+  display: flex
+  align-items: center
+  font-size: 12px
+  padding: 3px 10px
+  border: 1px solid rgba(27, 31, 35, 0.2)
+  border-radius: 3px
+  background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%)
+  margin-left: 4px
+  font-weight: 600
+
+  &:hover
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%)
+    border-color: rgba(27, 31, 35, 0.35)
+    background-position: -.5em
+
+  .material-icons
+    height: 16px
+    width: 16px
+    margin-right: 4px
+
+svg#clouds
+  position: fixed
+  bottom: -160px
+  left: -230px
+  z-index: -10
+  width: 1920px
+
+/* Responsive Styles
+@media screen and (max-width: 767px)
+  .card-container > *:not(.circle-link), .terminal
+    width: 100%
+
+  .card
+    &:not(.highlight-card)
+      height: 16px
+      margin: 8px 0
+
+    &.highlight-card span
+      margin-left: 72px
+
+  svg#rocket-smoke
+    right: 120px
+    transform: rotate(-5deg)
+
+@media screen and (max-width: 575px)
+  svg#rocket-smoke
+    display: none
+    visibility: hidden
+
+
+.button-contained
+  position: relative
+  display: inline-block
+  box-sizing: border-box
+  border: none
+  border-radius: 4px
+  padding: 0 16px
+  min-width: 64px
+  height: 36px
+  vertical-align: middle
+  text-align: center
+  text-overflow: ellipsis
+  text-transform: uppercase
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255))
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243))
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system)
+  font-size: 14px
+  font-weight: 500
+  line-height: 36px
+  overflow: hidden
+  outline: none
+  cursor: pointer
+  transition: box-shadow 0.2s
+
+  &::-moz-focus-inner
+    border: none
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255))
+    opacity: 0
+    transition: opacity 0.2s
+
+  &::after
+    content: ""
+    position: absolute
+    left: 50%
+    top: 50%
+    border-radius: 50%
+    padding: 50%
+    width: 32px
+
+    /* Safari
+    height: 32px
+
+    /* Safari
+    background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255))
+    opacity: 0
+    transform: translate(-50%, -50%) scale(1)
+    transition: opacity 1s, transform 0.5s
+
+  &:hover, &:focus
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12)
+
+  &:hover::before
+    opacity: 0.08
+
+  &:focus::before
+    opacity: 0.24
+
+  &:hover:focus::before
+    opacity: 0.3
+
+  &:active
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12)
+
+    &::after
+      opacity: 0.32
+      transform: translate(-50%, -50%) scale(0)
+      transition: transform 0s
+
+  &:disabled
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38)
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12)
+    box-shadow: none
+    cursor: initial
+
+    &::before, &::after
+      opacity: 0
