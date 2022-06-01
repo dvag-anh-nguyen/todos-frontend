@@ -9,6 +9,12 @@
   />
   <span>{{t('app.name')}} {{ version$ | async }} </span>
 
+  <nav class="nav-top">
+    <a href="/dashboard" class="nav-link">Dashboard</a>
+    <a href="/boards" class="nav-link">Boards</a>
+    <a href="/tasks" class="nav-link">Tasks</a>
+  </nav>
+
   <div class="spacer"></div>
   <a (click)="loadTasks()" class="button-contained">
     Load Tasks

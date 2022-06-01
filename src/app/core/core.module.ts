@@ -6,7 +6,7 @@ import {TranslocoRootModule} from "./transloco/transloco-root.module";
 
 @NgModule({
   declarations: [
-    WithLoadingPipe,
+    WithLoadingPipe
   ],
   exports: [
     WithLoadingPipe
