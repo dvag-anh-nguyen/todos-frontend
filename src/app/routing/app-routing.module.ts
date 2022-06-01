@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: ROUTES.TASKS.DEFAULT,
-    component: TasksOverviewPageComponent
+    loadChildren: () => import("../core/pages/dashboard-page").then(m => m.TasksOverviewPageComponent)
   },
   {
     path: ROUTES.BOARDS.DEFAULT,
